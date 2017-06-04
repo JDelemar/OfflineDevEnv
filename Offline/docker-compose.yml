@@ -1,0 +1,102 @@
+# 20170507
+# docker-compose for the following images
+  # registry
+  # local-npm
+  # node
+  # portainer
+# specific version numbers are used for tags and were the latest at the time of creation
+
+# Run
+  # docker-compose up -d
+# Stop
+  # docker-compose down
+
+version: "2"
+
+services:
+  # registry
+  # source: 
+    # Docker: https://hub.docker.com/_/registry/
+    # Git: https://github.com/docker/distribution-library-image
+  # Run
+    # docker run -d -p 5000:5000 --restart always --name registry registry:2
+    # docker run -d -p 5000:5000 -v "$PWD/data/registry":/var/lib/registry --name registry registry:2
+  # Commands
+    # Pull (or build) some image from the hub
+      # docker pull ubuntu
+    # Tag the image so it points to your registry
+      # docker tag ubuntu localhost:5000/ubuntu
+    # Push it
+      # docker push localhost:5000/ubuntu
+    # Pull it back
+      # docker pull localhost:5000/ubuntu
+    # Stop your registry and remove all data
+      # docker stop registry && docker rm -v registry
+  # Questions
+    # were are the images kept? /var/lib/registry
+  registry:
+    # from alpine:3.4
+    image: registry:2.6.1
+    # without below (ports) the ports are not available outside of the container 
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data/registry:/var/lib/registry
+    expose:
+      - 5000
+    container_name: devregistry
+    networks:
+      - appnet
+  # local-npm
+  # source: 
+    # Docker: https://hub.docker.com/r/orlandohohmeier/local-npm/
+    # Git:  https://github.com/orlandohohmeier/docker-local-npm
+  # Run 
+    # docker run -d -v "$PWD/data/npm":/data -p 5080:5080 orlandohohmeier/local-npm:latest
+  # Set registry 
+    # Configure npm to use your shiny new local npm registry
+      # npm set registry http://0.0.0.0:5080
+    # Switch back to default
+      # npm set registry https://registry.npmjs.org
+  # A rudimentary npm-like UI that you can use to search modules and see their descriptions is at http://localhost:5080/_browse
+  # Questions 
+    # Can I get yeoman?
+      # supposedly yes, try getting the yeoman generator that you want (e.g. npm install --global generator-fountain-webapp), when done it should be installed for offline usage
+  npm:
+    # from node:6.0.0, debian/jessie
+    # image: orlandohohmeier/local-npm:1.0.0-local-npm.1.6.0
+    build: ./npm 
+    # without below (ports) the ports are not available outside of the container 
+    ports:
+      - "5080:5080"
+      - "16984:16984"
+    expose:
+     - 5080
+     - 16984
+    volumes:
+      - ./data/npm:/data
+    container_name: devnpm
+    networks:
+      - appnet
+  node:
+    # image: node:alpine
+    build: ./node 
+    container_name: devnode
+    # sleeps a number of seconds (about 16 minutes) forever...docker will exit this container without this
+    # command: sh -c "while true; do sleep 1000; done"
+    networks:
+      - appnet
+  # optional begin
+  # portainer allows container management
+  portainer:
+    image: portainer/portainer
+    ports:
+      - 9000:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - appnet
+  # optional end
+networks:
+  appnet:
+    driver: bridge
