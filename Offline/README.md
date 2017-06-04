@@ -2,7 +2,7 @@
 Get local Docker images and npm packages
 
 ##### Steps:
-1. Get folders and files in this repository **or** copy and paste the `pasteIt.yml` file in Terminal
+1. Get folders and files in this repository
 2. Run the docker-compose.yml `docker-compose up -d`
 
    local-npm should start cloning the npm registry into the `data/npm` directory
