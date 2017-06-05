@@ -18,12 +18,7 @@ npm install --global generator-fountain-webapp
 
 echo "Finished pulling packages"
 
-# su node 
-# cd ~
-# mkdir /home/node/tempApp
-# cd tempApp
-
-echo "Run yo @microsoft/sharepoint and accept default settings to pull some more packages"
+echo "Run yo @microsoft/sharepoint as node (type 'su node' to swith to user node) and accept default settings to pull some more packages"
 
 # sleeps a number of seconds, otherwise docker will exit this container
 echo "Sleeping"
