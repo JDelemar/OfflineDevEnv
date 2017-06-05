@@ -21,7 +21,7 @@ Work in progress..
 ##### Docker Images
 [Local Docker images and npm](https://github.com/JDelemar/link)
 
-|Image|OS |Benefit
+|Image|OS |Purpose
 |-----|---|-------
 |Portus|Linux|House Docker images with a front end for Docker Repository 2.1 or later
 |Portainer|Linux|Docker engine web interface|
@@ -41,7 +41,7 @@ Microsoft - dotnet, aspnet, windowsservercore, nanoserver, mssql-server-linux, d
 ##### Node packages
 [Local Docker images and npm](https://github.com/JDelemar/OfflineDevEnv/tree/master/Offline)
 
-|Image|Benefit
+|Image|Purpose
 |---|---
 |local-npm|Offline npm registry for installing node packages
 |SharePoint Framework|Could be the direction of SharePoint 2016 and beyond<br/>(May have to get example/empty projects<br/>From a node environment, git [_To do Client-Side Web Part_](https://github.com/waldekmastykarz/spfx-angular-ts-todo), run following the README, save the files)
