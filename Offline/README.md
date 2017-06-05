@@ -16,7 +16,7 @@ Get local Docker images and npm packages
 
    (1) Check the `devnode` container logs to see if has finished yeoman and generators with `docker logs devnode`
 
-   (2) Once the `devnode` container has finished, start a temporary project to capture sharepoint framework packages by type `yo @microsoft/sharepoint` in the `/home/node/tempApp` directory. Enter the running container by using portainer or entering `docker exec -it devnode /bin/sh`
+   (2) Once the `devnode` container has finished, start a temporary project to capture sharepoint framework packages by type `yo @microsoft/sharepoint` in the `/home/node/tempApp` directory as the node user (`su node`). Enter the running container by using portainer or entering `docker exec -it devnode /bin/sh`
 
    b. Get Selenium
    `working on this`
