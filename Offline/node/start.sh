@@ -10,10 +10,6 @@ done
 
 echo devnpm found, application started
 
-cd ~
-mkdir tempApp
-cd tempApp
-
 # set registry to local-npm IP address
 npm set registry http://$ip:5080
 # pull some packages so they can install in local-npm 
@@ -21,6 +17,12 @@ npm install --global gulp yo @microsoft/generator-sharepoint
 npm install --global generator-fountain-webapp
 
 echo "Finished pulling packages"
+
+su node 
+cd ~
+mkdir tempApp
+cd tempApp
+
 echo "Run yo @microsoft/sharepoint and accept default settings to pull some more packages"
 
 # sleeps a number of seconds, otherwise docker will exit this container
