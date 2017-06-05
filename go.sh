@@ -1,5 +1,6 @@
 #!/bin/bash
 # go.sh
+# To test on play with docker (http://labs.play-with-docker.com), cut and paste this into the console starting with the next line uncommented
 # git clone https://github.com/JDelemar/OfflineDevEnv.git
 cd OfflineDevEnv/Offline 
 docker-compose up -d
