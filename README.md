@@ -16,7 +16,6 @@ Work in progress..
 
 |Software|Acquire|OS|Benefit|
 |--------|-------|---|-------|
-|Editor.md|[Get Editor.md](https://github.com/pandao/editor.md/archive/master.zip)|Windows (nodejs)/Linux|Git your readme looking right
 |Playground|???|javascript - nodejs|Check out how your scripts look
 
 ##### Docker Images
