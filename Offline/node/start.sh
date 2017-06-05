@@ -18,10 +18,10 @@ npm install --global generator-fountain-webapp
 
 echo "Finished pulling packages"
 
-su node 
-cd ~
-mkdir tempApp
-cd tempApp
+# su node 
+# cd ~
+# mkdir /home/node/tempApp
+# cd tempApp
 
 echo "Run yo @microsoft/sharepoint and accept default settings to pull some more packages"
 
