@@ -36,24 +36,17 @@ All files should be located in the `data` directory
 |Image|OS |Benefit
 |-----|---|---
 |Portus|Linux|House Docker images with a front end for Docker Repository 2.1 or later
-
-Portainer
-
-Nginx
-
-Apache
-
-Node
-
-Alpine
-
-MySql
-
-Centos
-
-Git
-
-Piwik
+|Portainer|Linux|Docker engine web interface|
+|Registry|Linux|Stores and distributes Docker images|
+|Nginx|Linux|Open source reverse proxy server|
+|Apache|Linux|Apache HTTP server|
+|Node|Linux|Javascript for server-side and networking apps|
+|Alpine|Linux|Lightweight Linux distro|
+|MySql|Linux|Popular opensource database|
+|Gitlab|Linux|Source code management|
+|Piwik|Linux|Open source analytics|
+|Spfx|Linux|SharePoint Framework|
+|Play with Docker|Linux|Docker playground|
 
 Microsoft - dotnet, aspnet, windowsservercore, nanoserver, mssql-server-linux, dotnet-samples
 
