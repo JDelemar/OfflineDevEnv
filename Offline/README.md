@@ -5,9 +5,9 @@ Get local Docker images and npm packages
 1. Get folders and files in this repository
    ```
    git clone https://github.com/JDelemar/OfflineDevEnv.git
-   cd OfflineDevEnv/Offline
+   cd OfflineDevEnv
    ```
-2. Run the docker-compose.yml `docker-compose up -d` or `./go.sh`
+2. Run the docker-compose.yml with `cd Offline && docker-compose up -d` or `./go.sh`
 
    local-npm should start cloning the npm registry into the `data/npm` directory
 
