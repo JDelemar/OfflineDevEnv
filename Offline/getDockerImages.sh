@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # getDockerImages.sh
 # gets docker images and loads them in a local repo
 
