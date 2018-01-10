@@ -36,7 +36,7 @@ services:
     # were are the images kept? /var/lib/registry
   registry:
     # from alpine:3.4
-    image: registry:2.6.1
+    image: registry:2.6.2
     # without below (ports) the ports are not available outside of the container 
     ports:
       - "5000:5000"
@@ -89,7 +89,7 @@ services:
   # optional begin
   # portainer allows container management
   portainer:
-    image: portainer/portainer
+    image: portainer/portainer:1.15.5
     ports:
       - 9000:9000
     volumes:

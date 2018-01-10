@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:8.9.4-alpine
 
 COPY start.sh /home/node/start.sh
 
