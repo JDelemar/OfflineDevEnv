@@ -9,6 +9,8 @@ Work in progress..
 |**Nodejs**|[Get Node.js LTS](https://nodejs.org)|Windows|Continuous development, continuous testing, automating testing
 |**Docker**|[Get Docker Community Edition](https://www.docker.com/community-edition)|Linux/Windows 10/Windows Server 2016|Quick environment setups and tear downs to support continuous development,  continuous testing, automating testing, increase of discovery to use
 |**Visual Studio Code**|[Get Visual Studio Code](https://code.visualstudio.com/download)|Windows|Integrated development environment better than Notepad|
+|**Java**|[Get Java](https://java.com/en/download/manual.jsp)|Linux/Windows|Java mainly to use Selenium
+|**Electron**|[Get Electron](https://github.com/electron/electron/releases/tag/v1.7.10)|Linux/Windows|Build javascript desktop apps
 |Local Docker images and npm|[Local Docker images and npm](https://github.com/JDelemar/OfflineDevEnv/tree/master/Offline)|Linux/Mac (Docker)|Utilize Docker and npm locally
 |**Play With Docker**|[Get PWD](https://github.com/play-with-docker/play-with-docker/archive/master.zip)|Linux|Play with Docker things
 
